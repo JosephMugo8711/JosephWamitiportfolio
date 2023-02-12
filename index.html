@@ -18,7 +18,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <iframe src="/assets/imgs/resume.pdf" id="my_cv" frameborder="0" style="border: 0; display: none" width="300" height="300"></iframe>
+    <iframe src="/assets/resume.pdf" id="resume" frameborder="0" style="border: 0; display: none" width="300" height="300"></iframe>
     <header class="header">
         <div class="container">
             <!-- <div class="icons-bar">
@@ -93,7 +93,7 @@
                     I have an eye for creating elegant, modern designs that are both aesthetically pleasing and functional. I also have experience with web scraping and automation, along with working with a range of databases and servers. I am an avid learner and am always open to exploring new technologies and techniques to improve my work.
                     I enjoy collaborating on projects with others from various backgrounds and the opportunity to work with a diverse set of technologies. I take pride in my commitment to producing exceptional, reliable results and am confident that I can make meaningful contributions to any project.
                 </p>
-                <button class="btn btn-outline-danger" onclick="print()">
+                <button  class="btn btn-outline-danger resume" onclick="print()">
             <i class="icon-down-circled2"></i>Download My CV
           </button>
             </div>
@@ -702,7 +702,7 @@
       e.preventDefault();
 
       let formData = {
-        name: "name.value ",
+        name: name.value ,
         email: email.value,
         subject: subject.value,
         message: message.value,
@@ -721,7 +721,7 @@
 
   <script>
     function print() {
-      let objFrame = document.getElementById("my_cv ");
+      let objFrame = document.getElementById("resume");
       objFrame.contentWindow.focus();
       objFrame.contentWindow.print();
     }
